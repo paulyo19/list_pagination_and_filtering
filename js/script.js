@@ -36,7 +36,7 @@ const page = 10
 ***/
 
 const showPage = (list, page) => {
-   
+
 }
 
 
@@ -44,7 +44,9 @@ const showPage = (list, page) => {
    Create the `appendPageLinks function` to generate, append, and add 
    functionality to the pagination buttons.
 ***/
-
+const appendPageLinks = (list) => {
+   
+}
 
 
 
