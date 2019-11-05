@@ -36,8 +36,10 @@ const page = 10
 ***/
 
 const showPage = (list, page) => {
-
-}
+     let startIndex = (page * 10) - 10;
+     let endIndex = page * 10
+   }
+   
 
 
 /*** 
