@@ -35,7 +35,7 @@ const page = 10
        "invoke" the function 
 ***/
 
-function showPage(list, page){
+const showPage = (list, page) => {
    
 }
 
