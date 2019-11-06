@@ -37,9 +37,14 @@ const page = 10
 
 const showPage = (list, page) => {
      let startIndex = (page * 10) - 10;
-     let endIndex = page * 10
+     let endIndex = page * 10;
+     for (let i = 0; i < startIndex.length; i++) {
+        let li = startIndex[i];
+        if (li >= 10 )
+        console.log('hello')
+     }
    }
-   
+  
 
 
 /*** 
