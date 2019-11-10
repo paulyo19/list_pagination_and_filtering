@@ -1,5 +1,3 @@
-
-
 const studentList = document.getElementsByClassName('student-item')
 const numPages = 10
 
@@ -25,7 +23,11 @@ const appendPageLinks = (list) => {
    pagination.className = 'pagination'
    div.appendChild(ul)
    
-   
+   for (let i = 0; i < studentList.length; i++) {
+      let li = document.createElement('LI')
+      ul.appendChild(li)
+   }
+
 }
 
 console.log(appendPageLinks())
