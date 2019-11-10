@@ -20,6 +20,8 @@ const showPage = (list, page) => {
 
 
 const appendPageLinks = (list) => {
-
+   let pagination = document.createElement('div')
+   pagination.appendChild(page)
+   
 }
 
