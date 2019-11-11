@@ -23,7 +23,7 @@ const appendPageLinks = (list) => {
    pagination.className = 'pagination'
    div.appendChild(ul)
    
-   for (let i = 0; i < studentList.length; i++) {
+   for (let i = 0; i < list.length / 10; i++) {
       let li = document.createElement('LI')
       ul.appendChild(li)
    }
