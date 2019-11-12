@@ -26,8 +26,10 @@ const appendPageLinks = (list) => {
    for (let i = 0; i < list.length / 10; i++) {
       let li = document.createElement('LI')
       ul.appendChild(li)
+      li.appendChild(a)
+      
    }
-
+   
 }
 
 console.log(appendPageLinks())
