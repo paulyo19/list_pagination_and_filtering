@@ -18,14 +18,16 @@ const showPage = (list, page) => {
 
 
 const appendPageLinks = (list) => {
+   const pageList = Math.floor(list.length / numPages);
    let div = document.createElement('div')
    div.className = 'pagination'
-   let ul = document.createElement('ul')
-   div.appendChild(ul)
+   let ulStudent = document.createElement('ul')
+   div.appendChild(ulStudent)
    
-   for (let i = 0; i < list.length / 10; i++) {
+   for (let i = 1; i < pageList / 10; i++) {
       let li = document.createElement('LI')
-      ul.appendChild(li)
+      ulStudent.appendChild(li)
+      let a = document.createElement('a')
       li.appendChild(a)
       
    }
