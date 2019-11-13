@@ -21,6 +21,8 @@ const appendPageLinks = (list) => {
    const pageList = Math.floor(list.length / numPages);
    let div = document.createElement('div')
    div.className = 'pagination'
+   let dotPage = document.querySelector('.page')
+   dotPage.appendChild(div)
    let ulStudent = document.createElement('ul')
    div.appendChild(ulStudent)
    
@@ -33,5 +35,3 @@ const appendPageLinks = (list) => {
    }
    
 }
-
-console.log(appendPageLinks())
