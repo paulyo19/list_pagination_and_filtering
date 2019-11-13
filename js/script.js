@@ -18,9 +18,9 @@ const showPage = (list, page) => {
 
 
 const appendPageLinks = (list) => {
-   let div = document.createElement('DIV')
-   let ul = document.createElement('UL')
-   pagination.className = 'pagination'
+   let div = document.createElement('div')
+   div.className = 'pagination'
+   let ul = document.createElement('ul')
    div.appendChild(ul)
    
    for (let i = 0; i < list.length / 10; i++) {
