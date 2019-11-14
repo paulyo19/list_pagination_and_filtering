@@ -31,7 +31,9 @@ const appendPageLinks = (list) => {
       ulStudent.appendChild(li)
       let a = document.createElement('a')
       li.appendChild(a)
-      
+      a.href = "#";
+      a.textContent = i; 
+      aFirst.className = 'active';
    }
    
 }
