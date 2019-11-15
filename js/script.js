@@ -35,5 +35,4 @@ const appendPageLinks = (list) => {
       a.textContent = i; 
       aFirst.className = 'active';
    }
-   
 }
