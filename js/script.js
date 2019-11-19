@@ -1,4 +1,4 @@
-const studentList = document.getElementsByClassName('student-item')
+const studentList = document.querySelectorAll('.student-item')
 const numPages = 10
 
 
@@ -26,19 +26,26 @@ const appendPageLinks = (list) => {
    let ulStudent = document.createElement('ul')
    div.appendChild(ulStudent)
    
-   for (let i = 1; i < pageList / 10; i++) {
-      let li = document.createElement('LI')
+   for (let i = 0; i < pageList / 10; i++) {
+      let li = document.createElement('li')
       ulStudent.appendChild(li)
       let a = document.createElement('a')
-      let startA = document.querySelector('a');
       li.appendChild(a)
+      let startA = document.querySelector('a');
       a.href = "#";
       a.textContent = i; 
       startA.className = 'active';
       let lastA = document.querySelectorAll('a')
-      for (let index = 1; index <= lastA.length; index++)
+      for (let p = 1; p <= lastA.length; p++)
       a.addEventListener('click', (e) => {
-         showPage(list, index)
+         showPage(list, p)
+         for (let k = 0; k < lastA; k++){
+            lastA.className = 'none'
+         }
+         e.target.className = 'active'
       })
    }
 }
+
+showPage()
+appendPageLinks(numPages)
