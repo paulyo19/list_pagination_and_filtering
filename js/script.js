@@ -30,9 +30,10 @@ const appendPageLinks = (list) => {
       let li = document.createElement('LI')
       ulStudent.appendChild(li)
       let a = document.createElement('a')
+      const aStart = document.querySelector('a');
       li.appendChild(a)
       a.href = "#";
       a.textContent = i; 
-      aFirst.className = 'active';
+      aStart.className = 'active';
    }
 }
