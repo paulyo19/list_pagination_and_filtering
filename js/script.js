@@ -30,10 +30,15 @@ const appendPageLinks = (list) => {
       let li = document.createElement('LI')
       ulStudent.appendChild(li)
       let a = document.createElement('a')
-      const aStart = document.querySelector('a');
+      let startA = document.querySelector('a');
       li.appendChild(a)
       a.href = "#";
       a.textContent = i; 
-      aStart.className = 'active';
+      startA.className = 'active';
+      let lastA = document.querySelectorAll('a')
+      for (let index = 1; index <= lastA.length; index++)
+      a.addEventListener('click', (e) => {
+         showPage(list, index)
+      })
    }
 }
