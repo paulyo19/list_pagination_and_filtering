@@ -7,7 +7,7 @@ const showPage = (list, page) => {
    let startIndex = (page * 10) - 10;
    let endIndex = page * 10;
    for (let i = 0; i < studentList.length; i++) {
-      if ( i >= startIndex && i <= endIndex) {
+      if ( i >= (page - 1) * numPages && i < (page * numPages)) {
          list[i].style.display = '';
       } else {
          list[i].style.display = 'none';
@@ -27,7 +27,7 @@ const appendPageLinks = (list) => {
    
    for (let i = 0; i < pageList / 10; i++) {
       let li = document.createElement('li')
-      ulStudent.appendChild(li)
+      ul.appendChild(li)
       let a = document.createElement('a')
       li.appendChild(a)
       let startA = document.querySelector('a');
