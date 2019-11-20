@@ -6,15 +6,15 @@ const numPages = 10
 const showPage = (list, page) => {
    let startIndex = (page * 10) - 10;
    let endIndex = page * 10;
-   for (let i = 0; i < list.length; i++) {
-      let li = list[i]
-      if (list >= startIndex && list <= endIndex) {
-         li.style.display = '';
+   for (let i = 0; i < studentList.length; i++) {
+      if ( i >= startIndex && i <= endIndex) {
+         list[i].style.display = '';
       } else {
-         li.style.display = 'none';
+         list[i].style.display = 'none';
       }
    }
 }
+showPage(studentList, 1)
 
 
 const appendPageLinks = (list) => {
@@ -39,13 +39,8 @@ const appendPageLinks = (list) => {
       for (let p = 1; p <= lastA.length; p++)
       a.addEventListener('click', (e) => {
          showPage(list, p)
-         for (let k = 0; k < lastA; k++){
-            lastA.className = 'none'
-         }
-         e.target.className = 'active'
       })
    }
 }
 
-showPage()
 appendPageLinks(numPages)
