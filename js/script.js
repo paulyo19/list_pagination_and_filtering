@@ -44,3 +44,7 @@ const appendPageLinks = (list) => {
 }
 
 appendPageLinks()
+
+const searchBar = () => {
+   
+}
