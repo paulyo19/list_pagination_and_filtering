@@ -27,18 +27,18 @@ const appendPageLinks = (list) => {
    
    for (let i = 0; i < pageList / 10; i++) {
       let li = document.createElement('li')
-      ul.appendChild(li)
+      ul.appendChild(li)  
       let a = document.createElement('a')
       li.appendChild(a)
-      let startA = document.querySelector('a');
-      a.href = "#";
-      a.textContent = i; 
-      startA.className = 'active';
-      let lastA = document.querySelectorAll('a')
-      for (let p = 1; p <= lastA.length; p++)
       a.addEventListener('click', (e) => {
-         showPage(list, p)
+         let aTag = e.target.parentNode.querySelectorAll('a')
+         for (let k = 0; k < aTag.length; k++){
+            aTag[k].classList.remove('active')
+         }
+         e.target.classList.add('active')
+         showPage(studentList, i + 1)
       })
+      a.href = '#'
    }
 }
 
