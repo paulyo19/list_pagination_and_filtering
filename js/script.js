@@ -39,7 +39,8 @@ const appendPageLinks = (list) => {
          showPage(studentList, i + 1)
       })
       a.href = '#'
+      a.textContent = i + 1
    }
 }
 
-appendPageLinks(numPages)
+appendPageLinks()
