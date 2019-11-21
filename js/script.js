@@ -3,7 +3,7 @@ const numstudents = 10
 let numPages = 1
 let searchBar = document.createElement('div')
 let searchInput = document.createElement('input')
-
+let buttonSearch = document.createElement('button')
 
 const showPage = (list, page) => {
    let startIndex = (page * 10) - 10;
@@ -50,4 +50,9 @@ appendPageLinks()
 const searchButton = () => {
    searchBar.className = 'search'
    searchBar.appendChild(searchInput)
+   buttonSearch.textContent = 'Search'
+   searchInput.placeholder = 'Browse Students'
+   searchBar.appendChild(buttonSearch)
+   document.querySelector('.page-header').appendChild(searchBar)
+
 }
