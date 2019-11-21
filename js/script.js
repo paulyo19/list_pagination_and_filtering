@@ -1,6 +1,8 @@
 const studentList = document.querySelectorAll('.student-item')
 const numstudents = 10
 let numPages = 1
+let searchBar = document.createElement('div')
+let searchInput = document.createElement('input')
 
 
 const showPage = (list, page) => {
@@ -45,6 +47,7 @@ const appendPageLinks = (list) => {
 
 appendPageLinks()
 
-const searchBar = () => {
-   
+const searchButton = () => {
+   searchBar.className = 'search'
+   searchBar.appendChild(searchInput)
 }
