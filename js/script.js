@@ -58,11 +58,11 @@ const searchButton = () => {
 
 searchButton()
 
-const typeSearch () => {
+const typeSearch = () => {
    let studentName = ''
-   let text = searchInput.value.toLocaleLowerCase()
+   let text = searchInput.value.toLowerCase()
    for (let i = 0; i < studentList.length; i++) {
-      studentName = studentName.querySelectorAll('h3').textContent.toLocaleLowerCase()
+      studentName = studentList[i].querySelector('h3').textContent.toLowerCase()
       if (studentName.indexOf(searchInput) > -1) {
          studentList[i].style.display = ''
       } else {
@@ -71,3 +71,5 @@ const typeSearch () => {
    }
 }
 
+searchInput.addEventListener('keyup', typeSearch)
+buttonSearch.addEventListener('click', typeSearch)
