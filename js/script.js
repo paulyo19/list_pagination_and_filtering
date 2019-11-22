@@ -61,5 +61,9 @@ searchButton()
 const typeSearch () => {
    let studentName = ''
    let text = searchInput.value.toLocaleLowerCase()
+   for (let i = 0; i < studentList.length; i++) {
+      studentName = studentName.querySelectorAll('h3').textContent.toLocaleLowerCase()
+      
+   }
 }
 
