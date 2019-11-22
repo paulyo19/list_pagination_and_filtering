@@ -63,7 +63,11 @@ const typeSearch () => {
    let text = searchInput.value.toLocaleLowerCase()
    for (let i = 0; i < studentList.length; i++) {
       studentName = studentName.querySelectorAll('h3').textContent.toLocaleLowerCase()
-      
+      if (studentName.indexOf(searchInput) > -1) {
+         studentList[i].style.display = ''
+      } else {
+         studentList[i].style.display = 'none'
+      }
    }
 }
 
