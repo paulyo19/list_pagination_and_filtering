@@ -54,5 +54,12 @@ const searchButton = () => {
    searchInput.placeholder = 'Browse Students'
    searchBar.appendChild(buttonSearch)
    document.querySelector('.page-header').appendChild(searchBar)
-
 }
+
+searchButton()
+
+const typeSearch () => {
+   let studentName = ''
+   let text = searchInput.value.toLocaleLowerCase()
+}
+
