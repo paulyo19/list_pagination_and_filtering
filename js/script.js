@@ -19,7 +19,7 @@ const showPage = (list, page) => {
 showPage(studentList, 1)
 
 
-const appendPageLinks = (list) => {
+const appendPageLinks = () => {
    const pageList = Math.ceil(studentList.length / numstudents);
    let div = document.createElement('div')
    div.className = 'pagination'
@@ -27,11 +27,9 @@ const appendPageLinks = (list) => {
    let ul = document.createElement('ul')
    div.appendChild(ul)
    
-   for (let i = 0; i < pageList / 10; i++) {
+   for (let i = 0; i < pageList; i++) {
       let li = document.createElement('li')
-      ul.appendChild(li)  
-      let a = document.createElement('a')
-      li.appendChild(a)
+      let a = document.createElement('a') 
       a.addEventListener('click', (e) => {
          let aTag = e.target.parentNode.querySelectorAll('a')
          for (let k = 0; k < aTag.length; k++){
@@ -41,7 +39,12 @@ const appendPageLinks = (list) => {
          showPage(studentList, i + 1)
       })
       a.href = '#'
-      a.textContent = i + 1
+         a.textContent = i + 1
+         li.appendChild(a)
+         ul.appendChild(li) 
+      if (i == 0){
+         a.classList.add('active')
+      }
    }
 }
 
@@ -63,7 +66,7 @@ const typeSearch = () => {
    let text = searchInput.value.toLowerCase()
    for (let i = 0; i < studentList.length; i++) {
       studentName = studentList[i].querySelector('h3').textContent.toLowerCase()
-      if (studentName.indexOf(searchInput) > -1) {
+      if (studentName.indexOf(text) > -1) {
          studentList[i].style.display = ''
       } else {
          studentList[i].style.display = 'none'
