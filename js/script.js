@@ -6,8 +6,6 @@ let searchInput = document.createElement('input')
 let buttonSearch = document.createElement('button')
 
 const showPage = (list, page) => {
-   let startIndex = (page * 10) - 10;
-   let endIndex = page * 10;
    for (let i = 0; i < studentList.length; i++) {
       if ( i >= (page - 1) * numstudents && i < (page * numstudents)) {
          list[i].style.display = '';
