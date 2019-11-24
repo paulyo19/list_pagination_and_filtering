@@ -5,6 +5,8 @@ let searchBar = document.createElement('div')
 let searchInput = document.createElement('input')
 let buttonSearch = document.createElement('button')
 
+
+// THIS FUNCTION HIDES ALL STUDENTS EXCEPT FOR THE TEN I WANT TO DISPLAY ON TH PAGE
 const showPage = (list, page) => {
    for (let i = 0; i < studentList.length; i++) {
       if ( i >= (page - 1) * numstudents && i < (page * numstudents)) {
@@ -16,7 +18,7 @@ const showPage = (list, page) => {
 }
 showPage(studentList, 1)
 
-
+// IN THIS FUNCTION I AM CREATING ALL TH PAGNATION BUTTONS, APPENDING THEM TO THE DOM AND ADDING THERE FUNCTIONALITY
 const appendPageLinks = () => {
    const pageList = Math.ceil(studentList.length / numstudents);
    let div = document.createElement('div')
@@ -59,6 +61,7 @@ const searchButton = () => {
 
 searchButton()
 
+// THIS FUNCTION LOOPS THREW ALL THE STUDENTS AND WILL NOT DISPLAY THE ONES THAT DONT MATCH WHAT IS TYPED IN THE SEARCHBAR
 const typeSearch = () => {
    let studentName = ''
    let text = searchInput.value.toLowerCase()
