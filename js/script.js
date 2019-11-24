@@ -32,8 +32,8 @@ const appendPageLinks = () => {
       let a = document.createElement('a') 
       a.addEventListener('click', (e) => {
          let aTag = e.target.parentNode.querySelectorAll('a')
-         for (let k = 0; k < aTag.length; k++){
-            aTag[k].classList.remove('active')
+         for (let i = 0; i < aTag.length; i++){
+            aTag[i].classList.remove('active')
          }
          e.target.classList.add('active')
          showPage(studentList, i + 1)
@@ -44,7 +44,7 @@ const appendPageLinks = () => {
          ul.appendChild(li) 
       if (i == 0){
          a.classList.add('active')
-      }
+      } 
    }
 }
 
